@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "Pacifico";
+  src: url("assets/Pacifico-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Fredoka-VariableFont";
+  src: url("assets/Fredoka-VariableFont_wdth,wght.ttf");
+}
+
+$main-color: rgb(181, 0, 96);
+
+body {
+  background-color: #f5b1c2;
+  font-family: "Fredoka-VariableFont";
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 64px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin-left: 32px;
+}
+
+h1 {
+  color: $main-color;
+  font-family: "Pacifico";
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  background-color: white;
+  border: unset;
+  height: 48px;
+  padding: 0 16px;
+  min-width: 150px;
+  border-radius: 32px;
+  font-family: inherit; //geerbt vom Übergeordneten Element (body)
+  @extend .center-all;
+}
+
+.button-main {
+  @extend .button;
+  background-color: $main-color;
+  color: white;
+}
+
+.center-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-text {
+  color: white;
+  position: absolute;
+  top: 20vh;
+  left: 64px;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.main-color {
+  color: $main-color;
+}
+
+@mixin rightCorner() {
+  position: absolute;
+  bottom: 0;
+  right: 20vw;
+}
+
+@mixin circle($size, $bgColor: #f55d6e) {
+  width: $size;
+  height: $size;
+  background-color: $bgColor;
+  border-radius: 50%;
+}
+
+.ice-image {
+  width: 40vw;
+  @include rightCorner();
+}
+
+.circle {
+  @include rightCorner();
+  @include circle(50vw);
+}
