@@ -54,9 +54,11 @@ h1 {
   min-width: 150px;
   border-radius: 32px;
   font-family: inherit; //geerbt vom Übergeordneten Element (body)
+  cursor: pointer;
   @extend .center-all;
   &:hover {
     filter: brightness(1.2);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   }
 }
 
