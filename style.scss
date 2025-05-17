@@ -16,9 +16,8 @@ body {
 }
 
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @extend .center-all;
+  justify-content: space-between !important;
   padding: 0px 64px;
 }
 
@@ -26,6 +25,9 @@ a {
   color: white;
   text-decoration: none;
   margin-left: 32px;
+  &:hover {
+    color: $main-color;
+  }
 }
 
 h1 {
@@ -39,6 +41,11 @@ h1 {
   align-items: center;
 }
 
+.row {
+  display: flex;
+  gap: 16px;
+}
+
 .button {
   background-color: white;
   border: unset;
@@ -48,12 +55,15 @@ h1 {
   border-radius: 32px;
   font-family: inherit; //geerbt vom Übergeordneten Element (body)
   @extend .center-all;
+  &:hover {
+    filter: brightness(1.2);
+  }
 }
 
 .button-main {
   @extend .button;
   background-color: $main-color;
-  color: white;
+  color: white !important;
 }
 
 .center-all {
