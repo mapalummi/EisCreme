@@ -15,6 +15,10 @@ header {
   justify-content: space-between !important;
   padding: 0px 64px;
 }
+header nav {
+  display: flex;
+  align-items: center;
+}
 
 a {
   color: white;
@@ -29,11 +33,6 @@ h1 {
   color: rgb(181, 0, 96);
   font-family: "Pacifico";
   text-align: center;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
 }
 
 .row {
